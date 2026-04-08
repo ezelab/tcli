@@ -1,6 +1,6 @@
 # tcli
 
-A CLI for coding agents to convert any file format to text and extract metadata. Self-contained native binary — no JVM required.
+A CLI for coding agents to convert any file format to text and extract metadata. Built on [Apache Tika](https://tika.apache.org/) and [Tesseract OCR](https://github.com/tesseract-ocr/tesseract). Self-contained native binary — no JVM required.
 
 ## Features
 
