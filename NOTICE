@@ -1,0 +1,20 @@
+tcli
+Copyright 2026 ezelab
+
+This product includes software developed at:
+
+The Apache Software Foundation (https://www.apache.org/)
+  - Apache Tika (https://tika.apache.org/) — Apache License 2.0
+  - Apache PDFBox (https://pdfbox.apache.org/) — Apache License 2.0
+  - Apache FontBox — Apache License 2.0
+  - Apache Commons Logging — Apache License 2.0
+
+picocli (https://picocli.info/) — Apache License 2.0
+Jackson JSON (https://github.com/FasterXML/jackson) — Apache License 2.0
+Tess4J (https://github.com/nguyenq/tess4j) — Apache License 2.0
+SLF4J (https://www.slf4j.org/) — MIT License
+Jakarta Mail API (https://jakartaee.github.io/mail-api/) — EPL 2.0
+Eclipse Angus Mail (https://eclipse-ee4j.github.io/angus-mail/) — EPL 2.0
+
+Tesseract OCR (https://github.com/tesseract-ocr/tesseract) — Apache License 2.0
+  Tesseract is invoked as an external process and is not bundled in the binary.
