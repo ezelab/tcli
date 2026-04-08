@@ -1,9 +1,10 @@
 build/
 .gradle/
 *.class
-*.jar
 *.log
 .idea/
 *.iml
 .DS_Store
 /tmp/
+# Exclude built JARs but keep gradle wrapper
+build/libs/*.jar

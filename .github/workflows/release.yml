@@ -12,12 +12,11 @@ permissions:
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix:
         include:
           - os: ubuntu-latest
             artifact: tcli-linux-x86_64
-          - os: macos-13
-            artifact: tcli-darwin-x86_64
           - os: macos-latest
             artifact: tcli-darwin-arm64
           - os: windows-latest
@@ -28,7 +27,7 @@ jobs:
 
       - uses: graalvm/setup-graalvm@v1
         with:
-          java-version: '21'
+          java-version: '25'
           distribution: 'graalvm'
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -45,7 +44,10 @@ jobs:
         run: choco install tesseract
 
       - name: Build native image
-        run: ./gradlew nativeCompile
+        shell: bash
+        run: |
+          chmod +x gradlew
+          ./gradlew nativeCompile
 
       - name: Rename binary
         shell: bash
@@ -59,12 +61,8 @@ jobs:
       - name: Smoke test
         shell: bash
         run: |
-          if [ "${{ runner.os }}" = "Windows" ]; then
-            ./${{ matrix.artifact }} --version
-          else
-            chmod +x ${{ matrix.artifact }}
-            ./${{ matrix.artifact }} --version
-          fi
+          chmod +x ${{ matrix.artifact }} 2>/dev/null || true
+          ./${{ matrix.artifact }} --version
 
       - uses: actions/upload-artifact@v4
         with:
