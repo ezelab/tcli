@@ -68,16 +68,21 @@ graalvmNative {
             imageName.set("tcli")
 
             val graalLibPath = (System.getenv("JAVA_HOME") ?: "") + "/lib"
+            val isWindows = System.getProperty("os.name", "").lowercase().contains("win")
 
-            buildArgs.addAll(
+            val args = mutableListOf(
                 "--no-fallback",
                 "--enable-url-protocols=https,http",
                 "-H:+ReportExceptionStackTraces",
                 "-H:+AddAllCharsets",
                 "-Djava.awt.headless=true",
-                "-H:CLibraryPath=$graalLibPath",
-                "--initialize-at-build-time=java.awt,sun.awt,sun.java2d,sun.font,sun.lwawt,javax.imageio,com.github.jaiimageio,com.sun.imageio,org.apache.pdfbox,org.apache.fontbox,org.apache.commons.logging"
+                "--initialize-at-build-time=java.awt,sun.awt,sun.java2d,sun.font,sun.lwawt,javax.imageio,com.github.jaiimageio,com.sun.imageio,org.apache.pdfbox,org.apache.fontbox,org.apache.commons.logging",
+                "--initialize-at-run-time=sun.awt.X11,sun.awt.windows"
             )
+            if (!isWindows && graalLibPath.isNotEmpty()) {
+                args.add("-H:CLibraryPath=$graalLibPath")
+            }
+            buildArgs.addAll(args)
         }
     }
     toolchainDetection.set(false)
