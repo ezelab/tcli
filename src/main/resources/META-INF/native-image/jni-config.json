@@ -1,0 +1,73 @@
+[
+  {
+    "name": "sun.awt.image.BufImgSurfaceData",
+    "methods": [
+      {"name": "initRaster", "parameterTypes": ["java.lang.Object", "int", "int", "int", "int", "int", "int", "java.awt.image.IndexColorModel"]},
+      {"name": "initIDs", "parameterTypes": []}
+    ]
+  },
+  {
+    "name": "java.awt.image.BufferedImage",
+    "methods": [{"name": "initIDs", "parameterTypes": []}]
+  },
+  {
+    "name": "java.awt.image.ColorModel",
+    "methods": [{"name": "initIDs", "parameterTypes": []}]
+  },
+  {
+    "name": "java.awt.image.Raster",
+    "methods": [{"name": "initIDs", "parameterTypes": []}]
+  },
+  {
+    "name": "java.awt.image.SampleModel",
+    "methods": [{"name": "initIDs", "parameterTypes": []}]
+  },
+  {
+    "name": "java.awt.image.IndexColorModel",
+    "methods": [{"name": "initIDs", "parameterTypes": []}]
+  },
+  {
+    "name": "java.awt.image.SinglePixelPackedSampleModel",
+    "methods": [{"name": "initIDs", "parameterTypes": []}]
+  },
+  {
+    "name": "java.awt.image.Kernel",
+    "methods": [{"name": "initIDs", "parameterTypes": []}]
+  },
+  {
+    "name": "sun.awt.image.ByteComponentRaster",
+    "methods": [{"name": "initIDs", "parameterTypes": []}]
+  },
+  {
+    "name": "sun.awt.image.BytePackedRaster",
+    "methods": [{"name": "initIDs", "parameterTypes": []}]
+  },
+  {
+    "name": "sun.awt.image.IntegerComponentRaster",
+    "methods": [{"name": "initIDs", "parameterTypes": []}]
+  },
+  {
+    "name": "sun.awt.image.ShortComponentRaster",
+    "methods": [{"name": "initIDs", "parameterTypes": []}]
+  },
+  {
+    "name": "sun.awt.image.ImageRepresentation",
+    "methods": [
+      {"name": "initIDs", "parameterTypes": []},
+      {"name": "setDiffICM", "parameterTypes": ["int", "int", "int", "int", "int", "int", "int[]", "byte[]", "int", "int", "byte[]"]},
+      {"name": "setICMpixels", "parameterTypes": ["int", "int", "int", "int", "int[]", "byte[]", "int", "int", "sun.awt.image.IntegerComponentRaster"]}
+    ]
+  },
+  {
+    "name": "sun.awt.image.ImagingLib",
+    "methods": [
+      {"name": "init", "parameterTypes": []},
+      {"name": "transformBI", "parameterTypes": ["java.awt.image.BufferedImage", "java.awt.image.BufferedImage", "double[]", "int"]},
+      {"name": "transformRaster", "parameterTypes": ["java.awt.image.Raster", "java.awt.image.Raster", "double[]", "int"]},
+      {"name": "convolveBI", "parameterTypes": ["java.awt.image.BufferedImage", "java.awt.image.BufferedImage", "java.awt.image.Kernel", "int"]},
+      {"name": "convolveRaster", "parameterTypes": ["java.awt.image.Raster", "java.awt.image.Raster", "java.awt.image.Kernel", "int"]},
+      {"name": "lookupByteBI", "parameterTypes": ["java.awt.image.BufferedImage", "java.awt.image.BufferedImage", "byte[][]"]},
+      {"name": "lookupByteRaster", "parameterTypes": ["java.awt.image.Raster", "java.awt.image.Raster", "byte[][]"]}
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "name": "org.apache.tika.parser.ocr.TesseractOCRConfig",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.tika.parser.AutoDetectParser",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.tika.config.TikaConfig",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.tika.parser.DefaultParser",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.tika.detect.DefaultDetector",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.tika.parser.pdf.PDFParser",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.tika.parser.html.HtmlParser",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.tika.parser.txt.TXTParser",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.tika.parser.xml.XMLParser",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  }
+]
